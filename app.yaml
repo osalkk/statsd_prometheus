@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: myapp
+    image: osalkk/flask_app_statsd
+    ports:
+    - containerPort: 5000
+      protocol: TCP
